@@ -9,16 +9,27 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        builder.Services.AddAuthorization();
+        // Controllers
+        builder.Services.AddControllers();
 
-        // Rejestracja repozytorium generycznego
-        builder.Services.AddSingleton(typeof(IGenericRepositoryAsync<>), 
-            typeof(MemoryGenericRepository<>));
+        // Repozytoria
+        builder.Services.AddSingleton<IPersonRepository, MemoryPersonRepository>();
+        builder.Services.AddSingleton<ICompanyRepository, MemoryCompanyRepository>();
+        builder.Services.AddSingleton<IOrganizationRepository, MemoryOrganizationRepository>();
+
+        // UnitOfWork
+        builder.Services.AddSingleton<IContactUnitOfWork, MemoryContactUnitOfWork>();
+
+        // Service
+        builder.Services.AddSingleton<IPersonService, MemoryPersonService>();
 
         var app = builder.Build();
 
         app.UseHttpsRedirection();
         app.UseAuthorization();
+
+        // REST Controllers
+        app.MapControllers();
 
         app.Run();
     }
