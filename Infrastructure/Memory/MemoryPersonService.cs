@@ -25,8 +25,42 @@ public class MemoryPersonService(IContactUnitOfWork unitOfWork) : IPersonService
     public async Task<IAsyncEnumerable<PersonDto>> FindPeopleFromCompany(Guid companyId)
     {
         var people = await unitOfWork.Persons.FindByCompanyAsync(companyId);
-
         return GetAsync(people);
+    }
+
+    public async Task<Person> AddPerson(CreatePersonDto personDto)
+    {
+        var entity = personDto.ToEntity();
+
+        entity = await unitOfWork.Persons.AddAsync(entity);
+        await unitOfWork.SaveChangesAsync();
+
+        return entity;
+    }
+
+    public async Task<Person> UpdatePerson(UpdatePersonDto personDto)
+    {
+        var existing = await unitOfWork.Persons.FindByIdAsync(personDto.Id);
+
+        if (existing == null)
+            throw new KeyNotFoundException("Person not found");
+
+        personDto.UpdateEntity(existing);
+
+        var updated = await unitOfWork.Persons.UpdateAsync(existing);
+        await unitOfWork.SaveChangesAsync();
+
+        return updated;
+    }
+
+    public async Task<PersonDto?> GetById(Guid id)
+    {
+        var person = await unitOfWork.Persons.FindByIdAsync(id);
+
+        if (person == null)
+            return null;
+
+        return PersonDto.FromEntity(person);
     }
 
     private async IAsyncEnumerable<PersonDto> GetAsync(IEnumerable<Person> people)

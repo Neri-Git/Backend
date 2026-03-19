@@ -4,6 +4,7 @@ using AppCore.ValueObjects;
 namespace AppCore.Dto;
 
 public record UpdatePersonDto(
+    Guid Id,
     string? FirstName,
     string? LastName,
     string? Email,
