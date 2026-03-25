@@ -12,5 +12,6 @@ public abstract class Contact : EntityBase
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
     public List<string> Tags { get; set; } = new();
+    
     public List<Note> Notes { get; set; } = new();
 }

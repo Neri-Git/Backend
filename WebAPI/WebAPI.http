@@ -5,30 +5,63 @@ GET {{WebApi_HostAddress}}/api/contacts
 Accept: application/json
 
 ###
-GET http://localhost:5175/api/contacts/d6ae8a07-ef76-40c5-93bf-ed5c6d5d6a2f
-Accept: application/json
 
 ### CREATE PERSON
 POST {{WebApi_HostAddress}}/api/contacts
 Content-Type: application/json
 
 {
-  "firstName": "Adam",
-  "lastName": "Nowak",
-  "email": "adam@wsei.edu.pl",
+  "firstName": "Karol",
+  "lastName": "Kopacz",
+  "email": "karol@wsei.edu.pl",
   "phone": "48 123 456 789",
   "gender": 0
 }
+
 ###
-PUT http://localhost:5175/api/contacts/d6ae8a07-ef76-40c5-93bf-ed5c6d5d6a2f
+
+### GET PERSON BY ID
+GET {{WebApi_HostAddress}}/api/contacts/8daebdd2-0a94-4a6a-a7fa-0b61722c8ae5
+Accept: application/json
+
+
+###
+
+### UPDATE PERSON
+PUT {{WebApi_HostAddress}}/api/contacts/8daebdd2-0a94-4a6a-a7fa-0b61722c8ae5
 Content-Type: application/json
 
 {
-  "id": "d6ae8a07-ef76-40c5-93bf-ed5c6d5d6a2f",
-  "firstName": "test",
+  "id": "8daebdd2-0a94-4a6a-a7fa-0b61722c8ae5",
+  "firstName": "AdamTest",
   "lastName": "NowakTest",
   "email": "adam.updated@email.com",
-  "phone": "995659999",
+  "phone": "999999999",
   "gender": 0
 }
+###
 
+### Create Note
+POST http://localhost:5175/api/contacts/843ef820-5b51-49a2-8d31-0c4d5b1bb94b
+Content-Type: application/json
+
+{
+  "content": "Pierwsza notatka"
+}
+### 
+
+###GET
+GET http://localhost:5175/api/contacts/fd862cc7-4e96-4ed9-bb48-92697fde19e5
+### 
+
+###ADD
+POST http://localhost:5175/api/contacts/fd862cc7-4e96-4ed9-bb48-92697fde19e5/notes
+Content-Type: application/json
+
+{
+  "content": "test"
+}
+### 
+
+###Delete
+DELETE http://localhost:5175/api/contacts/fd862cc7-4e96-4ed9-bb48-92697fde19e5/notes/b11ffe86-2d62-480e-94ab-7a852298e2ba

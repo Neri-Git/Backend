@@ -1,4 +1,5 @@
 ﻿using AppCore.Dto;
+using AppCore.Exceptions;
 using AppCore.Interfaces;
 using AppCore.Models;
 
@@ -63,6 +64,41 @@ public class MemoryPersonService(IContactUnitOfWork unitOfWork) : IPersonService
         return PersonDto.FromEntity(person);
     }
 
+    public async Task<Note> AddNoteToPerson(Guid personId, CreateNoteDto noteDto)
+    {
+        var person = await unitOfWork.Persons.FindByIdAsync(personId);
+
+        if (person is null)
+            throw new ContactNotFoundException($"Person with id={personId} not found!");
+
+        if (person.Notes is null)
+            person.Notes = new List<Note>();
+
+        var note = new Note
+        {
+            Id = Guid.NewGuid(),
+            Content = noteDto.Content,
+            CreatedAt = DateTime.UtcNow
+        };
+
+        person.Notes.Add(note);
+
+        await unitOfWork.Persons.UpdateAsync(person);
+        await unitOfWork.SaveChangesAsync();
+
+        return note;
+    }
+
+    public async Task<PersonDto> GetPerson(Guid personId)
+    {
+        var person = await unitOfWork.Persons.FindByIdAsync(personId);
+
+        if (person is null)
+            throw new ContactNotFoundException($"Person with id={personId} not found!");
+
+        return PersonDto.FromEntity(person);
+    }
+
     private async IAsyncEnumerable<PersonDto> GetAsync(IEnumerable<Person> people)
     {
         foreach (var person in people)
@@ -70,5 +106,26 @@ public class MemoryPersonService(IContactUnitOfWork unitOfWork) : IPersonService
             yield return PersonDto.FromEntity(person);
             await Task.Yield();
         }
+    }
+
+    public async Task DeleteNote(Guid personId, Guid noteId)
+    {
+        var person = await unitOfWork.Persons.FindByIdAsync(personId);
+
+        if (person is null)
+            throw new ContactNotFoundException($"Person with id={personId} not found!");
+
+        if (person.Notes is null || !person.Notes.Any())
+            throw new Exception("No notes to delete.");
+
+        var note = person.Notes.FirstOrDefault(n => n.Id == noteId);
+
+        if (note is null)
+            throw new Exception($"Note with id={noteId} not found.");
+
+        person.Notes.Remove(note);
+
+        await unitOfWork.Persons.UpdateAsync(person);
+        await unitOfWork.SaveChangesAsync();
     }
 }
