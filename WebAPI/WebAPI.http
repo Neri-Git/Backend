@@ -21,18 +21,18 @@ Content-Type: application/json
 ###
 
 ### GET PERSON BY ID
-GET {{WebApi_HostAddress}}/api/contacts/8daebdd2-0a94-4a6a-a7fa-0b61722c8ae5
+GET {{WebApi_HostAddress}}/api/contacts/fd70525e-e2ab-4c63-b236-07391b21640c
 Accept: application/json
 
 
 ###
 
 ### UPDATE PERSON
-PUT {{WebApi_HostAddress}}/api/contacts/8daebdd2-0a94-4a6a-a7fa-0b61722c8ae5
+PUT {{WebApi_HostAddress}}/api/contacts/fd70525e-e2ab-4c63-b236-07391b21640c
 Content-Type: application/json
 
 {
-  "id": "8daebdd2-0a94-4a6a-a7fa-0b61722c8ae5",
+  "id": "fd70525e-e2ab-4c63-b236-07391b21640c",
   "firstName": "AdamTest",
   "lastName": "NowakTest",
   "email": "adam.updated@email.com",
@@ -42,7 +42,7 @@ Content-Type: application/json
 ###
 
 ### Create Note
-POST http://localhost:5175/api/contacts/843ef820-5b51-49a2-8d31-0c4d5b1bb94b
+POST http://localhost:5175/api/contacts/fd70525e-e2ab-4c63-b236-07391b21640c/notes
 Content-Type: application/json
 
 {
@@ -51,17 +51,13 @@ Content-Type: application/json
 ### 
 
 ###GET
-GET http://localhost:5175/api/contacts/fd862cc7-4e96-4ed9-bb48-92697fde19e5
+GET http://localhost:5175/api/contacts/fd70525e-e2ab-4c63-b236-07391b21640c
 ### 
 
-###ADD
-POST http://localhost:5175/api/contacts/fd862cc7-4e96-4ed9-bb48-92697fde19e5/notes
-Content-Type: application/json
-
-{
-  "content": "test"
-}
-### 
 
 ###Delete
-DELETE http://localhost:5175/api/contacts/fd862cc7-4e96-4ed9-bb48-92697fde19e5/notes/b11ffe86-2d62-480e-94ab-7a852298e2ba
+DELETE http://localhost:5175/api/contacts/fd70525e-e2ab-4c63-b236-07391b21640c/notes/48e48e59-0b92-4c14-897d-815e94f6e23b
+
+###
+GET http://localhost:5175/api/contacts
+Accept: application/json
