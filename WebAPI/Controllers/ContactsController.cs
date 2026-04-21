@@ -1,5 +1,7 @@
-﻿using AppCore.Dto;
+﻿using AppCore.Authorization;
+using AppCore.Dto;
 using AppCore.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers;
@@ -9,6 +11,7 @@ namespace WebAPI.Controllers;
 public class ContactsController(IPersonService service) : ControllerBase
 {
     [HttpGet]
+    [Authorize(Policy = nameof(CrmPolicies.ReadOnlyAccess))]
     public async Task<IActionResult> GetAllPersons(int page = 1, int size = 10)
     {
         return Ok(await service.FindAllPeoplePaged(page, size));
@@ -75,6 +78,7 @@ public class ContactsController(IPersonService service) : ControllerBase
 
         return Ok(person.Notes);
     }
+
     [HttpDelete("{contactId:guid}/notes/{noteId:guid}")]
     public async Task<IActionResult> DeleteNote(Guid contactId, Guid noteId)
     {

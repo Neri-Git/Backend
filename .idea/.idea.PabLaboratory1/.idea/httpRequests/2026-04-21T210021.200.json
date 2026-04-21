@@ -1,0 +1,42 @@
+{
+  "items": [
+    {
+      "firstName": "Adam",
+      "lastName": "Nowak",
+      "position": "Programista",
+      "birthDate": "2001-01-11T00:00:00",
+      "gender": 0,
+      "employerId": null,
+      "notes": [],
+      "id": "3d54091d-abc8-49ec-9590-93ad3ed5458f",
+      "email": "adam@wsei.edu.pl",
+      "phone": "123456789",
+      "address": null,
+      "status": 0,
+      "tags": [],
+      "createdAt": "2026-03-31T00:00:00"
+    },
+    {
+      "firstName": "Ewa",
+      "lastName": "Kowalska",
+      "position": "Tester",
+      "birthDate": "2001-01-11T00:00:00",
+      "gender": 1,
+      "employerId": null,
+      "notes": [],
+      "id": "b4dcb17c-f875-43f8-9d66-36597895a466",
+      "email": "ewa@wsei.edu.pl",
+      "phone": "123123123",
+      "address": null,
+      "status": 2,
+      "tags": [],
+      "createdAt": "2026-03-31T00:00:00"
+    }
+  ],
+  "totalCount": 2,
+  "page": 1,
+  "pageSize": 10,
+  "totalPages": 1,
+  "hasNext": false,
+  "hasPrevious": false
+}
