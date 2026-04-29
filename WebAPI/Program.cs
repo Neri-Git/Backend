@@ -5,7 +5,7 @@ using Infrastructure.Security;
 
 namespace WebAPI;
 
-public class Program
+public partial class Program
 {
     public static async Task Main(string[] args)
     {
@@ -13,7 +13,7 @@ public class Program
 
         builder.Services.AddControllers();
 
-        builder.Services.AddContactsEfModule(builder.Configuration);
+        builder.Services.AddContactsEfModule(builder.Configuration, builder.Environment);
         builder.Services.AddContactsCoreModule(builder.Configuration);
 
         builder.Services.AddSingleton(new JwtSettings(builder.Configuration));

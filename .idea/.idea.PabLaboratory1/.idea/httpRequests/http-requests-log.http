@@ -1,4 +1,70 @@
-﻿GET http://localhost:5175/api/contacts
+﻿POST http://localhost:5175/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2026.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "jan.kowalski@crm.pl",
+  "password": "Manager@123!"
+}
+
+<> 2026-04-29T154849.200.json
+
+###
+
+GET http://localhost:5175/api/contacts
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjkzQTdGRkRELTA1N0YtNDAyMS05QzY4LUZFMDY5NTFGRkE2NSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6Imphbi5rb3dhbHNraUBjcm0ucGwiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9naXZlbm5hbWUiOiJKYW4iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zdXJuYW1lIjoiS293YWxza2kiLCJkZXBhcnRtZW50IjoiU2FsZXMiLCJqdGkiOiIwM2FkODNlZS0zYjA2LTQ1YzgtYjRhMC0yZDM2MmI0MTkxN2YiLCJpYXQiOiIxNzc3NDY4Mjk2IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiU2FsZXNNYW5hZ2VyIiwibmJmIjoxNzc3NDY4Mjk2LCJleHAiOjE3Nzc0NzE4OTYsImlzcyI6IklkZWlzQ3JtQXBpIiwiYXVkIjoiQ3JtQ2xpZW50In0.rqAMjtIB-ZsUWd2B1OtErXhwa59ZkoQ98COXQPdC-to
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2026.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2026-04-29T154845.200.json
+
+###
+
+GET http://localhost:5175/api/contacts
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2026.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+###
+
+GET http://localhost:5175/api/contacts
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjkzQTdGRkRELTA1N0YtNDAyMS05QzY4LUZFMDY5NTFGRkE2NSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6Imphbi5rb3dhbHNraUBjcm0ucGwiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9naXZlbm5hbWUiOiJKYW4iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zdXJuYW1lIjoiS293YWxza2kiLCJkZXBhcnRtZW50IjoiU2FsZXMiLCJqdGkiOiIwM2FkODNlZS0zYjA2LTQ1YzgtYjRhMC0yZDM2MmI0MTkxN2YiLCJpYXQiOiIxNzc3NDY4Mjk2IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiU2FsZXNNYW5hZ2VyIiwibmJmIjoxNzc3NDY4Mjk2LCJleHAiOjE3Nzc0NzE4OTYsImlzcyI6IklkZWlzQ3JtQXBpIiwiYXVkIjoiQ3JtQ2xpZW50In0.rqAMjtIB-ZsUWd2B1OtErXhwa59ZkoQ98COXQPdC-to
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2026.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+<> 2026-04-29T151152.200.json
+
+###
+
+POST http://localhost:5175/api/auth/login
+Content-Type: application/json
+Content-Length: 66
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2026.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "email": "jan.kowalski@crm.pl",
+  "password": "Manager@123!"
+}
+
+<> 2026-04-29T151137.200.json
+
+###
+
+GET http://localhost:5175/api/contacts
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2026.1
+Accept-Encoding: br, deflate, gzip, x-gzip
+
+###
+
+GET http://localhost:5175/api/contacts
 Accept: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjkzQTdGRkRELTA1N0YtNDAyMS05QzY4LUZFMDY5NTFGRkE2NSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6Imphbi5rb3dhbHNraUBjcm0ucGwiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9naXZlbm5hbWUiOiJKYW4iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zdXJuYW1lIjoiS293YWxza2kiLCJkZXBhcnRtZW50IjoiU2FsZXMiLCJqdGkiOiI2ZTI0MjljNi0yNDFiLTQwMzctYWUyNC1hNjEwZGNiN2JjNTkiLCJpYXQiOiIxNzc2Nzk3ODcyIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiU2FsZXNNYW5hZ2VyIiwibmJmIjoxNzc2Nzk3ODcyLCJleHAiOjE3NzY4MDE0NzIsImlzcyI6IklkZWlzQ3JtQXBpIiwiYXVkIjoiQ3JtQ2xpZW50In0.Vq2B_Rw1w0Iae5BOdG72SDTn3oPB96U1FPfFn4e_Bg4
 User-Agent: IntelliJ HTTP Client/JetBrains Rider 2026.1

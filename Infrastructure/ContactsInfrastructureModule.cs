@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 
 namespace Infrastructure;
@@ -21,7 +22,8 @@ public static class ContactsInfrastructureModule
 {
     public static IServiceCollection AddContactsEfModule(
         this IServiceCollection services,
-        IConfiguration configuration)
+        IConfiguration configuration,
+        IHostEnvironment env)
     {
         services.AddScoped<ICompanyRepository, EfCompanyRepository>();
         services.AddScoped<IPersonRepository, EfPersonRepository>();
@@ -32,7 +34,16 @@ public static class ContactsInfrastructureModule
         services.AddScoped<IDataSeeder, PeopleDbSeeder>();
 
         services.AddDbContext<ContactsDbContext>(options =>
-            options.UseSqlite(configuration.GetConnectionString("CrmDb")));
+        {
+            if (env.IsEnvironment("Testing"))
+            {
+                options.UseInMemoryDatabase("ContactsTestDb");
+            }
+            else
+            {
+                options.UseSqlite(configuration.GetConnectionString("CrmDb"));
+            }
+        });
 
         services.AddIdentity<CrmUser, CrmRole>(options =>
             {

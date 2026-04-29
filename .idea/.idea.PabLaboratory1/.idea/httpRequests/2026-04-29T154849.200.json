@@ -1,0 +1,14 @@
+{
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjkzQTdGRkRELTA1N0YtNDAyMS05QzY4LUZFMDY5NTFGRkE2NSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6Imphbi5rb3dhbHNraUBjcm0ucGwiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9naXZlbm5hbWUiOiJKYW4iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9zdXJuYW1lIjoiS293YWxza2kiLCJkZXBhcnRtZW50IjoiU2FsZXMiLCJqdGkiOiJkNjVhNDM4NC1iMGI2LTQxZDUtYTQ5OS02NTA5NDRkNmIyMmMiLCJpYXQiOiIxNzc3NDcwNTI5IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiU2FsZXNNYW5hZ2VyIiwibmJmIjoxNzc3NDcwNTI5LCJleHAiOjE3Nzc0NzQxMjksImlzcyI6IklkZWlzQ3JtQXBpIiwiYXVkIjoiQ3JtQ2xpZW50In0.LHO1lU4pcVKJrTGMyRH4g0irLx9wyGhpVRlT2YUBwMk",
+  "refreshToken": "VT9xRfr53SAUHYVzsO0mRtNpHb0PYsz6RYjW4El4UWQZTIGnquSg4qobLvUtfAuoDb5pBQrX7MSY99nCT6a/sw==",
+  "expiresAt": "2026-04-29T14:48:49.7445862Z",
+  "user": {
+    "id": "93a7ffdd-057f-4021-9c68-fe06951ffa65",
+    "email": "jan.kowalski@crm.pl",
+    "firstName": "Jan",
+    "lastName": "Kowalski",
+    "status": 0,
+    "department": "",
+    "roles": []
+  }
+}

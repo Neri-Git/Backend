@@ -38,7 +38,7 @@
     <option name="firstShow" value="false" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="2" />
+    <option name="cachedIndexableFilesCount" value="3" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Settings">
@@ -49,19 +49,29 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Neri-Git"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Neri-Git&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Neri-Git/Backend.git",
-    "accountId": "c2d99a0c-2484-4c60-8b3f-ecdd4c04b3b9"
+}</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="c2d99a0c-2484-4c60-8b3f-ecdd4c04b3b9" />
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Neri-Git/Backend.git&quot;,
+    &quot;accountId&quot;: &quot;c2d99a0c-2484-4c60-8b3f-ecdd4c04b3b9&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2532c812356b7d5448418be580b9c7afbc61d9f577df866acfb87950ef277b/TestInvoker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/38284ca4f4afe378f96fccac3e179f4bceda7a74eb151623b66d2dc3634d9b/ExceptionAggregator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f4af9413b11943bfdd164b58f2c3faa476fb6ffee3bb2d63ea7882b139c1/ThrowHelper.Serialization.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c28655223245c8d433d4d4234c31c4b8a4fd871bd6a0e2268c726eb4db0d/DbContextServices.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e0e3ccafd588b32b3d7ee942cb73758f1a346f75c92b352f3c229e0cd7c205f/DbContextOptionsBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppCore.Tests/Tests/ContactsApiTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/AppCore.Tests/Tests/TestAuthHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AppCore/Authorization/CrmPolicies.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AppCore/Dto/AuthResponseDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AppCore/Dto/LoginDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -81,10 +91,10 @@
     <urls />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3Cg2qB2UpiATg3NteH1lRiIjR6j" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -96,6 +106,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     ".NET Launch Settings Profile.WebAPI: http.executor": "Run",
+    "8ec9a5da-a519-4082-918c-7561283658da.executor": "Debug",
     "HTTP Request.WebAPI | GET all persons.executor": "Run",
     "HTTP Request.WebAPI | Get contacts with token.executor": "Run",
     "HTTP Request.WebAPI | Get contacts without token.executor": "Run",
@@ -109,12 +120,12 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "cidr.known.project.marker": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "lab-6",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -181,9 +192,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.WebAPI | Login" />
         <item itemvalue="HTTP Request.WebAPI | Get contacts with token" />
         <item itemvalue="HTTP Request.WebAPI | Get contacts without token" />
-        <item itemvalue="HTTP Request.WebAPI | Login" />
         <item itemvalue="HTTP Request.WebAPI | GET all persons" />
       </list>
     </recent_temporary>
