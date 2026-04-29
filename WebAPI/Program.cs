@@ -1,8 +1,12 @@
+using AppCore.Dto;
 using AppCore.Interfaces;
 using AppCore.Module;
 using Infrastructure;
 using Infrastructure.Security;
-
+using AppCore.Interfaces;
+using AppCore.Validators;
+using FluentValidation;
+using Infrastructure.Services;
 namespace WebAPI;
 
 public partial class Program
@@ -21,7 +25,13 @@ public partial class Program
 
         builder.Services.AddExceptionHandler<ProblemDetailsExceptionHandler>();
         builder.Services.AddProblemDetails();
-
+        
+        builder.Services.AddScoped<IContactImportService, ContactImportService>();
+        builder.Services.AddScoped<IValidator<CreateCompanyDto>, CreateCompanyDtoValidator>();
+        
+        builder.Services.AddScoped<IValidator<CreateOrganizationDto>, CreateOrganizationDtoValidator>();
+        builder.Services.AddScoped<IValidator<CreatePersonDto>, CreatePersonDtoValidator>();
+        
         var app = builder.Build();
 
         if (app.Environment.IsDevelopment())

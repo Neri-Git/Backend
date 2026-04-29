@@ -15,7 +15,7 @@ public class ContactsApiTests : IClassFixture<ContactsAppTestFactory<Program>>
     public ContactsApiTests(ContactsAppTestFactory<Program> factory)
     {
         _client = factory.CreateClient();
-        
+
         using var scope = factory.Services.CreateScope();
         var context = scope.ServiceProvider.GetRequiredService<ContactsDbContext>();
 
@@ -65,6 +65,7 @@ public class ContactsApiTests : IClassFixture<ContactsAppTestFactory<Program>>
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         Assert.Equal("application/json", response.Content.Headers.ContentType?.MediaType);
     }
+
     [Fact]
     public async Task GetPerson_ShouldReturnCorrectPerson()
     {
@@ -76,6 +77,7 @@ public class ContactsApiTests : IClassFixture<ContactsAppTestFactory<Program>>
         Assert.Equal(id, result.Id);
         Assert.Equal("Adam", result.FirstName);
     }
+
     [Fact]
     public async Task GetPerson_ShouldReturnNotFound_WhenPersonDoesNotExist()
     {
@@ -85,6 +87,7 @@ public class ContactsApiTests : IClassFixture<ContactsAppTestFactory<Program>>
 
         Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
     }
+
     [Fact]
     public async Task CreatePerson_ShouldReturnCreated()
     {
@@ -97,9 +100,9 @@ public class ContactsApiTests : IClassFixture<ContactsAppTestFactory<Program>>
             null,
             default,
             null,
+            null,
             null
         );
-
         var response = await _client.PostAsJsonAsync("/api/contacts", dto);
 
         Assert.Equal(HttpStatusCode.Created, response.StatusCode);
@@ -109,6 +112,7 @@ public class ContactsApiTests : IClassFixture<ContactsAppTestFactory<Program>>
         Assert.NotNull(created);
         Assert.Equal("Jan", created.FirstName);
     }
+
     [Fact]
     public async Task UpdatePerson_ShouldReturnOk()
     {
@@ -136,6 +140,7 @@ public class ContactsApiTests : IClassFixture<ContactsAppTestFactory<Program>>
 
         Assert.Equal("Updated", updated.FirstName);
     }
+
     [Fact]
     public async Task UpdatePerson_ShouldReturnBadRequest_WhenIdsMismatch()
     {
@@ -159,6 +164,7 @@ public class ContactsApiTests : IClassFixture<ContactsAppTestFactory<Program>>
 
         Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
     }
+
     [Fact]
     public async Task AddNote_ShouldReturnCreated()
     {

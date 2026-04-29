@@ -61,6 +61,7 @@ public class ContactsDbContext : IdentityDbContext<CrmUser, CrmRole, string>
             entity.Property(p => p.Email).HasMaxLength(200);
             entity.Property(p => p.Phone).HasMaxLength(20);
             entity.Property(p => p.CreatedAt).IsRequired();
+            entity.Property(p => p.CreatedByUserId).HasMaxLength(450);
             entity.Property(p => p.Status).HasConversion<string>();
             entity.Property<string>("ContactType").HasMaxLength(50);
 

@@ -12,6 +12,7 @@ public record CreatePersonDto(
     DateTime? BirthDate,
     Gender Gender,
     Guid? EmployerId,
+    Guid? OrganizationId,
     AddressDto? Address
 )
 {
@@ -27,7 +28,10 @@ public record CreatePersonDto(
             Position = Position,
             BirthDate = BirthDate,
             Gender = Gender,
-            EmployerId = EmployerId
+            EmployerId = EmployerId,
+            OrganizationId = OrganizationId,
+            Address = Address?.ToValueObject(),
+            Status = ContactStatus.Active
         };
     }
 }

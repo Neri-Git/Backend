@@ -1,0 +1,14 @@
+{
+  "importedContacts": [],
+  "errors": [
+    {
+      "contactType": "Json",
+      "sourceData": {},
+      "messages": [
+        "Invalid JSON file: The JSON value could not be converted to AppCore.Dto.CreatePersonDto. Path: $.people[0].gender | LineNumber: 9 | BytePositionInLine: 22."
+      ]
+    }
+  ],
+  "importedCount": 0,
+  "errorCount": 1
+}
