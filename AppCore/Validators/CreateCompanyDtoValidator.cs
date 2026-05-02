@@ -24,5 +24,10 @@ public class CreateCompanyDtoValidator : AbstractValidator<CreateCompanyDto>
         RuleFor(x => x.Nip)
             .NotEmpty()
             .WithMessage("NIP is required.");
+
+        RuleFor(x => x.Regon)
+            .MaximumLength(20)
+            .WithMessage("REGON cannot be longer than 20 characters.")
+            .When(x => !string.IsNullOrWhiteSpace(x.Regon));
     }
 }

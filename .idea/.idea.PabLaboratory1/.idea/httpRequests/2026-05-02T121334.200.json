@@ -31,9 +31,25 @@
       "status": 2,
       "tags": [],
       "createdAt": "2026-03-31T00:00:00"
+    },
+    {
+      "firstName": "Adam",
+      "lastName": "Kowalski",
+      "position": "Developer",
+      "birthDate": "1998-01-10T00:00:00",
+      "gender": 0,
+      "employerId": null,
+      "notes": [],
+      "id": "b2a96f3e-0f93-4afb-a738-d22e5aee8522",
+      "email": "adam.import@test.pl",
+      "phone": "123456789",
+      "address": null,
+      "status": 0,
+      "tags": [],
+      "createdAt": "2026-04-29T17:05:22.6142185"
     }
   ],
-  "totalCount": 2,
+  "totalCount": 3,
   "page": 1,
   "pageSize": 10,
   "totalPages": 1,

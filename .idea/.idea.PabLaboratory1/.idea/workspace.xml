@@ -15,16 +15,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d04a34e7-b265-4bcd-8b2e-11ccc8dcc119" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PabLaboratory1/.idea/httpRequests/2026-04-21T205742.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PabLaboratory1/.idea/httpRequests/2026-04-21T205752.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PabLaboratory1/.idea/httpRequests/2026-04-21T210021.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PabLaboratory1/.idea/httpRequests/2026-04-21T210618.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PabLaboratory1/.idea/httpRequests/2026-04-21T210720.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PabLaboratory1/.idea/httpRequests/2026-04-29T151137.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PabLaboratory1/.idea/httpRequests/2026-04-29T151152.200.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PabLaboratory1/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PabLaboratory1/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PabLaboratory1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PabLaboratory1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppCore.Tests/Tests/ContactsApiTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppCore.Tests/Tests/ContactsApiTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppCore/Dto/AddressDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppCore/Dto/AddressDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppCore/Dto/CreatePersonDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppCore/Dto/CreatePersonDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppCore/Models/Contact.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppCore/Models/Contact.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppCore/Dto/ContactBaseDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppCore/Dto/ContactBaseDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppCore/Dto/CreateCompanyDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppCore/Dto/CreateCompanyDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppCore/Dto/ImportedContactSummaryDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppCore/Dto/ImportedContactSummaryDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppCore/Dto/PersonDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppCore/Dto/PersonDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppCore/Models/Company.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppCore/Models/Company.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppCore/Validators/CreateCompanyDtoValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppCore/Validators/CreateCompanyDtoValidator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/EntityFramework/Context/ContactsDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/EntityFramework/Context/ContactsDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Migrations/ContactsDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Migrations/ContactsDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/ContactImportService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/ContactImportService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/ContactImportController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/ContactImportController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/WebAPI.http" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/WebAPI.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/contacts-import.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/contacts-import.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/contacts.db" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/contacts.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,6 +78,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6f4af9413b11943bfdd164b58f2c3faa476fb6ffee3bb2d63ea7882b139c1/ThrowHelper.Serialization.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c28655223245c8d433d4d4234c31c4b8a4fd871bd6a0e2268c726eb4db0d/DbContextServices.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e0e3ccafd588b32b3d7ee942cb73758f1a346f75c92b352f3c229e0cd7c205f/DbContextOptionsBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/.idea.PabLaboratory1/.idea/httpRequests/2026-05-02T120528.200.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/.idea.PabLaboratory1/.idea/httpRequests/2026-05-02T122206.200.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AppCore.Tests/Tests/ContactsApiTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AppCore.Tests/Tests/TestAuthHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AppCore/Authorization/CrmPolicies.cs" root0="FORCE_HIGHLIGHTING" />
@@ -84,7 +96,6 @@
     <setting file="file://$PROJECT_DIR$/AppCore/Interfaces/IAuthService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AppCore/Interfaces/IContactImportService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AppCore/Interfaces/IDataSeeder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/AppCore/Services/ContactImportService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/AppCore/Validators/CreateOrganizationDtoValidator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/Security/AuthService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/Security/JwtSettings.cs" root0="FORCE_HIGHLIGHTING" />
@@ -99,6 +110,9 @@
     <urls />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Toolset" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4,
   &quot;fromUser&quot;: false
@@ -119,8 +133,11 @@
     "HTTP Request.WebAPI | GET all persons.executor": "Run",
     "HTTP Request.WebAPI | Get contacts with token.executor": "Run",
     "HTTP Request.WebAPI | Get contacts without token.executor": "Run",
+    "HTTP Request.WebAPI | Import CSV - test przypisania do użytkownika.executor": "Run",
+    "HTTP Request.WebAPI | Import CSV.executor": "Run",
     "HTTP Request.WebAPI | Import JSON.executor": "Run",
     "HTTP Request.WebAPI | Login.executor": "Run",
+    "HTTP Request.WebAPI | Pobranie kontaktu po ID.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -151,11 +168,11 @@
         <entry key="HttpClient.HttpRequestRunConfigurationType">
           <value>
             <map>
-              <entry key="WebAPI | #8" value="STOPPED" />
               <entry key="WebAPI | Get contacts with token" value="STOPPED" />
-              <entry key="WebAPI | Get contacts without token" value="STOPPED" />
+              <entry key="WebAPI | Import CSV - test przypisania do użytkownika" value="STOPPED" />
               <entry key="WebAPI | Import JSON" value="STOPPED" />
               <entry key="WebAPI | Login" value="STOPPED" />
+              <entry key="WebAPI | Pobranie kontaktu po ID" value="STOPPED" />
             </map>
           </value>
         </entry>
@@ -166,16 +183,16 @@
     <configuration name="WebAPI | Get contacts with token" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/WebAPI/WebAPI.http" executionIdentifier="Get contacts with token" index="11" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="WebAPI | Get contacts without token" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/WebAPI/WebAPI.http" executionIdentifier="Get contacts without token" index="10" runType="Run single request">
+    <configuration name="WebAPI | Import CSV - test przypisania do użytkownika" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/WebAPI/WebAPI.http" executionIdentifier="Import CSV - test przypisania do użytkownika" index="13" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="WebAPI | Import JSON" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/WebAPI/WebAPI.http" executionIdentifier="Import JSON" index="12" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="WebAPI | Login" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/WebAPI/WebAPI.http" executionIdentifier="Login" index="9" runType="Run single request">
+    <configuration name="WebAPI | Login" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/WebAPI/WebAPI.http" executionIdentifier="Login" index="8" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="WebAPI | #8" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/WebAPI/WebAPI.http" executionIdentifier="#8" index="8" runType="Run single request">
+    <configuration name="WebAPI | Pobranie kontaktu po ID" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/WebAPI/WebAPI.http" executionIdentifier="Pobranie kontaktu po ID" index="14" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="WebAPI: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
@@ -212,11 +229,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.WebAPI | Import JSON" />
         <item itemvalue="HTTP Request.WebAPI | Get contacts with token" />
+        <item itemvalue="HTTP Request.WebAPI | Pobranie kontaktu po ID" />
+        <item itemvalue="HTTP Request.WebAPI | Import CSV - test przypisania do użytkownika" />
         <item itemvalue="HTTP Request.WebAPI | Login" />
-        <item itemvalue="HTTP Request.WebAPI | #8" />
-        <item itemvalue="HTTP Request.WebAPI | Get contacts without token" />
+        <item itemvalue="HTTP Request.WebAPI | Import JSON" />
       </list>
     </recent_temporary>
   </component>
@@ -228,7 +245,17 @@
       <option name="presentableId" value="Default" />
       <updated>1776793082478</updated>
       <workItem from="1776793083895" duration="5220000" />
+      <workItem from="1777716203980" duration="5894000" />
     </task>
+    <task id="LOCAL-00001" summary="Projekt, first commit">
+      <option name="closed" value="true" />
+      <created>1777482458315</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1777482458315</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +265,9 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="lab 8 testy integracyjne" />
+    <MESSAGE value="Projekt, first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Projekt, first commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

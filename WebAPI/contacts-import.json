@@ -11,6 +11,18 @@
       "employerId": null,
       "organizationId": null,
       "address": null
+    },
+    {
+      "firstName": "",
+      "lastName": "Kowalski",
+      "email": "bledny-email",
+      "phone": "",
+      "position": "Developer",
+      "birthDate": "1998-01-10",
+      "gender": "Male",
+      "employerId": null,
+      "organizationId": null,
+      "address": null
     }
   ],
   "companies": [

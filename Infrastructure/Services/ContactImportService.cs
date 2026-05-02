@@ -171,9 +171,23 @@ public class ContactImportService : IContactImportService
             if (headers is null)
             {
                 delimiter = DetectDelimiter(line);
+
                 headers = SplitCsvLine(line, delimiter)
-                    .Select(x => x.Trim())
+                    .Where(x => !string.IsNullOrWhiteSpace(x))
                     .ToList();
+
+                if (headers.Count < 2)
+                {
+                    result.Errors.Add(new ImportContactErrorDto
+                    {
+                        ContactType = currentGroup,
+                        SourceData = new Dictionary<string, string?> { { "HeaderLine", line } },
+                        Messages = { "CSV delimiter could not be detected or header contains too few columns." }
+                    });
+
+                    headers = null;
+                    continue;
+                }
 
                 continue;
             }
@@ -270,7 +284,8 @@ public class ContactImportService : IContactImportService
         {
             Id = person.Id,
             Name = $"{person.FirstName} {person.LastName}",
-            Type = "Person"
+            Type = "Person",
+            CreatedByUserId = person.CreatedByUserId
         });
     }
 
@@ -290,14 +305,31 @@ public class ContactImportService : IContactImportService
 
         var duplicateEmailKey = $"Company:Email:{dto.Email}";
         var duplicateNipKey = $"Company:Nip:{dto.Nip}";
+        var duplicateRegonKey = string.IsNullOrWhiteSpace(dto.Regon)
+            ? null
+            : $"Company:Regon:{dto.Regon}";
 
         if (!importedKeys.Add(duplicateEmailKey) || !importedKeys.Add(duplicateNipKey))
         {
             messages.Add("Duplicated company in imported file.");
         }
 
+        if (duplicateRegonKey is not null && !importedKeys.Add(duplicateRegonKey))
+        {
+            messages.Add("Duplicated company REGON in imported file.");
+        }
+
         var existsInDatabase = await _context.Companies
-            .AnyAsync(x => x.Email == dto.Email || x.Nip == dto.Nip, cancellationToken);
+            .AnyAsync(x =>
+                    x.Email == dto.Email ||
+                    x.Nip == dto.Nip ||
+                    (!string.IsNullOrWhiteSpace(dto.Regon) && x.Regon == dto.Regon),
+                cancellationToken);
+
+        if (existsInDatabase)
+        {
+            messages.Add("Company with this email, NIP or REGON already exists in database.");
+        }
 
         if (existsInDatabase)
         {
@@ -325,7 +357,8 @@ public class ContactImportService : IContactImportService
         {
             Id = company.Id,
             Name = company.Name,
-            Type = "Company"
+            Type = "Company",
+            CreatedByUserId = company.CreatedByUserId
         });
     }
 
@@ -380,7 +413,8 @@ public class ContactImportService : IContactImportService
         {
             Id = organization.Id,
             Name = organization.Name,
-            Type = "Organization"
+            Type = "Organization",
+            CreatedByUserId = organization.CreatedByUserId
         });
     }
 
@@ -407,6 +441,7 @@ public class ContactImportService : IContactImportService
             Email: Get(row, "Email"),
             Phone: Get(row, "Phone"),
             Nip: Get(row, "Nip"),
+            Regon: GetNullable(row, "Regon"),
             Address: null
         );
     }
@@ -506,16 +541,36 @@ public class ContactImportService : IContactImportService
 
     private static char DetectDelimiter(string headerLine)
     {
-        var possibleDelimiters = new[] { ';', '|', '\t', ':' };
+        var forbiddenDelimiters = new HashSet<char>
+        {
+            '@',
+            '+',
+            ',',
+            ' '
+        };
 
-        return possibleDelimiters
-            .OrderByDescending(delimiter => headerLine.Count(x => x == delimiter))
+        var delimiter = headerLine
+            .Where(c => !char.IsLetterOrDigit(c))
+            .Where(c => !forbiddenDelimiters.Contains(c))
+            .GroupBy(c => c)
+            .OrderByDescending(group => group.Count())
+            .Select(group => group.Key)
             .FirstOrDefault();
+
+        if (delimiter == default)
+        {
+            return ';';
+        }
+
+        return delimiter;
     }
 
     private static List<string> SplitCsvLine(string line, char delimiter)
     {
-        return line.Split(delimiter).ToList();
+        return line
+            .Split(delimiter)
+            .Select(value => value.Trim())
+            .ToList();
     }
 
     private static Dictionary<string, string?> ToDictionary<T>(T dto)

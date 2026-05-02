@@ -22,6 +22,7 @@ public record PersonDto : ContactBaseDto
             Phone = person.Phone,
             Status = person.Status,
             CreatedAt = person.CreatedAt,
+            CreatedByUserId = person.CreatedByUserId,
             FirstName = person.FirstName,
             LastName = person.LastName,
             Position = person.Position,

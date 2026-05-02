@@ -8,6 +8,7 @@ public record CreateCompanyDto(
     string Email,
     string Phone,
     string Nip,
+    string? Regon,
     AddressDto? Address
 )
 {
@@ -20,6 +21,7 @@ public record CreateCompanyDto(
             Email = Email,
             Phone = Phone,
             Nip = Nip,
+            Regon = Regon,
             Address = Address?.ToValueObject(),
             Status = ContactStatus.Active
         };

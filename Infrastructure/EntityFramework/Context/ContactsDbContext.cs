@@ -85,6 +85,7 @@ public class ContactsDbContext : IdentityDbContext<CrmUser, CrmRole, string>
         {
             entity.Property(c => c.Name).HasMaxLength(200);
             entity.Property(c => c.Nip).HasMaxLength(20);
+            entity.Property(c => c.Regon).HasMaxLength(20);
 
             entity.HasData(
                 new Company
@@ -92,6 +93,7 @@ public class ContactsDbContext : IdentityDbContext<CrmUser, CrmRole, string>
                     Id = Guid.Parse("516A34D7-CCFB-4F20-85F3-62BD0F3AF271"),
                     Name = "WSEI",
                     Nip = "1234567890",
+                    Regon = "000000000",
                     Phone = "123567123",
                     Email = "biuro@wsei.edu.pl",
                     Status = ContactStatus.Active,

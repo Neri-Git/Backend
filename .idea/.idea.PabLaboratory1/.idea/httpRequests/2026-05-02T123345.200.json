@@ -1,0 +1,73 @@
+{
+  "importedContacts": [],
+  "errors": [
+    {
+      "contactType": "Person",
+      "sourceData": {
+        "FirstName": "Adam",
+        "LastName": "Kowalski",
+        "Email": "adam.import@test.pl",
+        "Phone": "123456789",
+        "Position": "Developer",
+        "BirthDate": "10/01/1998 00:00:00",
+        "Gender": "Male",
+        "EmployerId": null,
+        "OrganizationId": null,
+        "Address": null
+      },
+      "messages": [
+        "Person with this email already exists in database."
+      ]
+    },
+    {
+      "contactType": "Person",
+      "sourceData": {
+        "FirstName": "",
+        "LastName": "Kowalski",
+        "Email": "bledny-email",
+        "Phone": "",
+        "Position": "Developer",
+        "BirthDate": "10/01/1998 00:00:00",
+        "Gender": "Male",
+        "EmployerId": null,
+        "OrganizationId": null,
+        "Address": null
+      },
+      "messages": [
+        "Imię jest wymagane.",
+        "Imię zawiera niedozwolone znaki.",
+        "Nieprawidłowy format adresu email.",
+        "Telefon jest wymagany.",
+        "Nieprawidłowy format numeru telefonu."
+      ]
+    },
+    {
+      "contactType": "Company",
+      "sourceData": {
+        "Name": "Ideis Import",
+        "Email": "biuro.import@ideis.pl",
+        "Phone": "987654321",
+        "Nip": "2384792834",
+        "Address": null
+      },
+      "messages": [
+        "Company with this email or NIP already exists in database."
+      ]
+    },
+    {
+      "contactType": "Organization",
+      "sourceData": {
+        "Name": "Test Organization Import",
+        "Email": "office.import@testorg.pl",
+        "Phone": "555444333",
+        "Type": "Other",
+        "Address": null
+      },
+      "messages": [
+        "Organization with this email or name already exists in database."
+      ]
+    }
+  ],
+  "importedCount": 0,
+  "errorCount": 4
+}

@@ -1,11 +1,13 @@
 using System.Security.Claims;
 using AppCore.Dto;
 using AppCore.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers;
 
 [ApiController]
+[Authorize]
 [Route("api/contact-import")]
 public class ContactImportController : ControllerBase
 {
@@ -18,7 +20,6 @@ public class ContactImportController : ControllerBase
 
     [HttpPost]
     [Consumes("multipart/form-data")]
-    [ProducesResponseType(typeof(ImportContactsResultDto), StatusCodes.Status200OK)]
     public async Task<ActionResult<ImportContactsResultDto>> ImportContacts(
         IFormFile file,
         CancellationToken cancellationToken)
@@ -32,7 +33,7 @@ public class ContactImportController : ControllerBase
 
         if (string.IsNullOrWhiteSpace(userId))
         {
-            userId = "anonymous";
+            return Unauthorized("Cannot identify importing user.");
         }
 
         await using var stream = file.OpenReadStream();

@@ -1,0 +1,16 @@
+{
+  "firstName": "Marek",
+  "lastName": "ImportOwner",
+  "position": "Tester",
+  "birthDate": "1995-05-10T00:00:00",
+  "gender": 0,
+  "employerId": null,
+  "notes": [],
+  "id": "22398d1c-fb86-4dee-89e5-51ce933231de",
+  "email": "marek.owner.test@test.pl",
+  "phone": "600111222",
+  "address": null,
+  "status": 0,
+  "tags": [],
+  "createdAt": "2026-05-02T10:43:33.748232"
+}

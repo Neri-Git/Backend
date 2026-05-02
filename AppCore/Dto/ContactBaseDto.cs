@@ -11,4 +11,5 @@ public abstract record ContactBaseDto
     public ContactStatus Status { get; init; }
     public List<string> Tags { get; init; } = new();
     public DateTime CreatedAt { get; init; }
+    public string? CreatedByUserId { get; init; }
 }

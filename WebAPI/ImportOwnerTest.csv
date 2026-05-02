@@ -1,0 +1,3 @@
+People
+FirstName;LastName;Email;Phone;Position;BirthDate;Gender;EmployerId;OrganizationId
+Kamil;ImportOwner;Kamil.owner.test@test.pl;600333222;Tester;1996-05-10;Male;;
