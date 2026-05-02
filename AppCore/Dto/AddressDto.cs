@@ -22,4 +22,15 @@ public record AddressDto(
             Type = Type
         };
     }
+
+    public static AddressDto FromValueObject(Address address)
+    {
+        return new AddressDto(
+            address.Street,
+            address.City,
+            address.PostalCode,
+            address.Country,
+            address.Type
+        );
+    }
 }

@@ -1,0 +1,48 @@
+{
+  "importedContacts": [
+    {
+      "id": "c99d01da-97b2-4f9f-b3b2-dfb42c630717",
+      "name": "Adam Kowalski",
+      "type": "Person",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "142f4f3a-63d5-4887-8aee-2d6e05ad4b22",
+      "name": "Ideis Import",
+      "type": "Company",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "783fbe0c-277a-4bf6-916e-5c7b8882ef4d",
+      "name": "Test Organization Import",
+      "type": "Organization",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    }
+  ],
+  "errors": [
+    {
+      "contactType": "Person",
+      "sourceData": {
+        "FirstName": "",
+        "LastName": "Kowalski",
+        "Email": "bledny-email",
+        "Phone": "",
+        "Position": "Developer",
+        "BirthDate": "10/01/1998 00:00:00",
+        "Gender": "Male",
+        "EmployerId": null,
+        "OrganizationId": null,
+        "Address": null
+      },
+      "messages": [
+        "Imię jest wymagane.",
+        "Imię zawiera niedozwolone znaki.",
+        "Nieprawidłowy format adresu email.",
+        "Telefon jest wymagany.",
+        "Nieprawidłowy format numeru telefonu."
+      ]
+    }
+  ],
+  "importedCount": 3,
+  "errorCount": 1
+}

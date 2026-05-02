@@ -1,0 +1,101 @@
+{
+  "people": [
+    {
+      "firstName": "Jan",
+      "lastName": "Kowalski",
+      "email": "jan.kowalski.import@test.pl",
+      "phone": "500100100",
+      "position": "Sales Specialist",
+      "birthDate": "1990-01-15",
+      "gender": "Male",
+      "employerId": null,
+      "organizationId": null,
+      "address": null
+    },
+    {
+      "firstName": "Anna",
+      "lastName": "Nowak",
+      "email": "anna.nowak.import@test.pl",
+      "phone": "500100101",
+      "position": "Account Manager",
+      "birthDate": "1992-03-20",
+      "gender": "Female",
+      "employerId": null,
+      "organizationId": null,
+      "address": null
+    },
+    {
+      "firstName": "Piotr",
+      "lastName": "Zielinski",
+      "email": "piotr.zielinski.import@test.pl",
+      "phone": "500100102",
+      "position": "Developer",
+      "birthDate": "1988-07-10",
+      "gender": "Male",
+      "employerId": null,
+      "organizationId": null,
+      "address": null
+    },
+    {
+      "firstName": "Ewa",
+      "lastName": "Wisniewska",
+      "email": "ewa.wisniewska.import@test.pl",
+      "phone": "500100103",
+      "position": "Tester",
+      "birthDate": "1995-11-05",
+      "gender": "Female",
+      "employerId": null,
+      "organizationId": null,
+      "address": null
+    }
+  ],
+  "companies": [
+    {
+      "name": "Alpha Import Sp z o.o.",
+      "email": "alpha.import@test.pl",
+      "phone": "600200100",
+      "nip": "1112223344",
+      "regon": "100200300",
+      "address": null
+    },
+    {
+      "name": "Beta Import S.A.",
+      "email": "beta.import@test.pl",
+      "phone": "600200101",
+      "nip": "2223334455",
+      "regon": "200300400",
+      "address": null
+    },
+    {
+      "name": "Gamma Import Ltd",
+      "email": "gamma.import@test.pl",
+      "phone": "600200102",
+      "nip": "3334445566",
+      "regon": "300400500",
+      "address": null
+    }
+  ],
+  "organizations": [
+    {
+      "name": "Foundation Import Test",
+      "email": "foundation.import@test.pl",
+      "phone": "700300100",
+      "type": "Other",
+      "address": null
+    },
+    {
+      "name": "Association Import Test",
+      "email": "association.import@test.pl",
+      "phone": "700300101",
+      "type": "Other",
+      "address": null
+    },
+    {
+      "name": "Public Unit Import Test",
+      "email": "publicunit.import@test.pl",
+      "phone": "700300102",
+      "type": "Other",
+      "address": null
+    }
+  ]
+}

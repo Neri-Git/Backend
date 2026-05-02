@@ -1,0 +1,25 @@
+{
+  "importedContacts": [
+    {
+      "id": "bdfd27ca-f2b1-408c-a78a-a7343ebf132f",
+      "name": "Ewa Nowak",
+      "type": "Person",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "7a35bdaf-66d7-4492-a1d5-bd36c8ae6028",
+      "name": "Firma Import CSV",
+      "type": "Company",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "c31537df-934d-445a-abc6-4650ebf19a3f",
+      "name": "Organizacja Import CSV",
+      "type": "Organization",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    }
+  ],
+  "errors": [],
+  "importedCount": 3,
+  "errorCount": 0
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Firma Hash",
+    "nip": "3234567890",
+    "regon": "333444555",
+    "notes": [],
+    "id": "ce8d71ac-ee60-4f52-935d-e60a329060c6",
+    "email": "firma.hash@test.pl",
+    "phone": "555111444",
+    "address": null,
+    "status": 0,
+    "tags": [],
+    "createdAt": "2026-05-02T12:18:36.0112335",
+    "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+  },
+  {
+    "name": "Firma JSON REGON",
+    "nip": "4234567890",
+    "regon": "444555666",
+    "notes": [],
+    "id": "ef5cefb6-89c3-4923-a8c5-ef77099f7949",
+    "email": "firma.json.regon@test.pl",
+    "phone": "555999888",
+    "address": null,
+    "status": 0,
+    "tags": [],
+    "createdAt": "2026-05-02T12:18:32.7398518",
+    "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+  },
+  {
+    "name": "Firma Kreska",
+    "nip": "2234567890",
+    "regon": "222333444",
+    "notes": [],
+    "id": "23c602b7-90a7-4e59-9603-f5892c8ed2d0",
+    "email": "firma.kreska@test.pl",
+    "phone": "555111333",
+    "address": null,
+    "status": 0,
+    "tags": [],
+    "createdAt": "2026-05-02T12:18:36.0089591",
+    "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+  },
+  {
+    "name": "WSEI",
+    "nip": "1234567890",
+    "regon": "000000000",
+    "notes": [],
+    "id": "516a34d7-ccfb-4f20-85f3-62bd0f3af271",
+    "email": "biuro@wsei.edu.pl",
+    "phone": "123567123",
+    "address": null,
+    "status": 0,
+    "tags": [],
+    "createdAt": "2026-03-31T00:00:00",
+    "createdByUserId": null
+  }
+]

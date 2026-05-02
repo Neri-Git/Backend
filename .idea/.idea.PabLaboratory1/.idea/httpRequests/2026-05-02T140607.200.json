@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Organizacja Import CSV",
+    "type": 5,
+    "notes": [],
+    "id": "5980af6e-5c90-402c-a222-23d2634ca941",
+    "email": "org.import@test.pl",
+    "phone": "555333222",
+    "address": null,
+    "status": 0,
+    "tags": [],
+    "createdAt": "2026-05-02T10:17:39.0927838",
+    "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+  },
+  {
+    "name": "Test Organization Import",
+    "type": 5,
+    "notes": [],
+    "id": "333d3767-5f1e-4554-b155-80195f9ff921",
+    "email": "office.import@testorg.pl",
+    "phone": "555444333",
+    "address": null,
+    "status": 0,
+    "tags": [],
+    "createdAt": "2026-04-29T17:05:22.6871029",
+    "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+  }
+]

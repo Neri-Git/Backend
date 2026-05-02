@@ -1,0 +1,96 @@
+{
+  "importedContacts": [],
+  "errors": [
+    {
+      "contactType": "Person",
+      "sourceData": {
+        "FirstName": "",
+        "LastName": "InvalidCsvPersonOne",
+        "Email": "wrong-person-email",
+        "Phone": "520900100",
+        "Position": "Tester",
+        "BirthDate": "1994-01-01",
+        "Gender": "Male",
+        "EmployerId": "",
+        "OrganizationId": ""
+      },
+      "messages": [
+        "Imię jest wymagane.",
+        "Imię zawiera niedozwolone znaki.",
+        "Nieprawidłowy format adresu email."
+      ]
+    },
+    {
+      "contactType": "Person",
+      "sourceData": {
+        "FirstName": "InvalidCsvPersonTwo",
+        "LastName": "NoPhone",
+        "Email": "invalid.csv.person.two@test.pl",
+        "Phone": "",
+        "Position": "Developer",
+        "BirthDate": "1995-02-02",
+        "Gender": "Female",
+        "EmployerId": "",
+        "OrganizationId": ""
+      },
+      "messages": [
+        "Telefon jest wymagany.",
+        "Nieprawidłowy format numeru telefonu."
+      ]
+    },
+    {
+      "contactType": "Company",
+      "sourceData": {
+        "Name": "",
+        "Email": "invalid.csv.company.one@test.pl",
+        "Phone": "620900100",
+        "Nip": "7778889991",
+        "Regon": "700800901"
+      },
+      "messages": [
+        "Company name is required."
+      ]
+    },
+    {
+      "contactType": "Company",
+      "sourceData": {
+        "Name": "Invalid CSV Company Two",
+        "Email": "wrong-company-email",
+        "Phone": "620900101",
+        "Nip": "",
+        "Regon": "800900101"
+      },
+      "messages": [
+        "Email has invalid format.",
+        "NIP is required."
+      ]
+    },
+    {
+      "contactType": "Organization",
+      "sourceData": {
+        "Name": "",
+        "Email": "invalid.csv.organization.one@test.pl",
+        "Phone": "720900100",
+        "Type": "Other"
+      },
+      "messages": [
+        "Organization name is required."
+      ]
+    },
+    {
+      "contactType": "Organization",
+      "sourceData": {
+        "Name": "Invalid CSV Organization Two",
+        "Email": "wrong-organization-email",
+        "Phone": "",
+        "Type": "Other"
+      },
+      "messages": [
+        "Email has invalid format.",
+        "Phone is required."
+      ]
+    }
+  ],
+  "importedCount": 0,
+  "errorCount": 6
+}

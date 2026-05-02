@@ -1,0 +1,14 @@
+People
+FirstName;LastName;Email;Phone;Position;BirthDate;Gender;EmployerId;OrganizationId
+;InvalidCsvPersonOne;wrong-person-email;520900100;Tester;1994-01-01;Male;;
+InvalidCsvPersonTwo;NoPhone;invalid.csv.person.two@test.pl;;Developer;1995-02-02;Female;;
+
+Companies
+Name;Email;Phone;Nip;Regon
+;invalid.csv.company.one@test.pl;620900100;7778889991;700800901
+Invalid CSV Company Two;wrong-company-email;620900101;;800900101
+
+Organizations
+Name;Email;Phone;Type
+;invalid.csv.organization.one@test.pl;720900100;Other
+Invalid CSV Organization Two;wrong-organization-email;;Other

@@ -1,0 +1,62 @@
+{
+  "people": [
+    {
+      "firstName": "",
+      "lastName": "InvalidPersonOne",
+      "email": "wrong-email-format",
+      "phone": "500900100",
+      "position": "Tester",
+      "birthDate": "1994-01-01",
+      "gender": "Male",
+      "employerId": null,
+      "organizationId": null,
+      "address": null
+    },
+    {
+      "firstName": "InvalidPersonTwo",
+      "lastName": "NoPhone",
+      "email": "invalid.person.two@test.pl",
+      "phone": "",
+      "position": "Developer",
+      "birthDate": "1995-02-02",
+      "gender": "Female",
+      "employerId": null,
+      "organizationId": null,
+      "address": null
+    }
+  ],
+  "companies": [
+    {
+      "name": "",
+      "email": "invalid.company.one@test.pl",
+      "phone": "600900100",
+      "nip": "7778889990",
+      "regon": "700800900",
+      "address": null
+    },
+    {
+      "name": "Invalid Company Two",
+      "email": "wrong-company-email",
+      "phone": "600900101",
+      "nip": "",
+      "regon": "800900100",
+      "address": null
+    }
+  ],
+  "organizations": [
+    {
+      "name": "",
+      "email": "invalid.organization.one@test.pl",
+      "phone": "700900100",
+      "type": "Other",
+      "address": null
+    },
+    {
+      "name": "Invalid Organization Two",
+      "email": "wrong-organization-email",
+      "phone": "",
+      "type": "Other",
+      "address": null
+    }
+  ]
+}

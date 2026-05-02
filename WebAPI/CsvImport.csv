@@ -1,0 +1,18 @@
+People
+FirstName;LastName;Email;Phone;Position;BirthDate;Gender;EmployerId;OrganizationId
+Marek;Lewandowski;marek.lewandowski.csv@test.pl;510100100;Sales Specialist;1991-02-10;Male;;
+Katarzyna;Kaminska;katarzyna.kaminska.csv@test.pl;510100101;Account Manager;1993-04-12;Female;;
+Tomasz;Wojcik;tomasz.wojcik.csv@test.pl;510100102;Developer;1989-08-22;Male;;
+Agnieszka;Mazur;agnieszka.mazur.csv@test.pl;510100103;Tester;1996-12-01;Female;;
+
+Companies
+Name;Email;Phone;Nip;Regon
+Delta CSV Sp z o.o.;delta.csv@test.pl;610200100;4445556677;400500600
+Epsilon CSV S.A.;epsilon.csv@test.pl;610200101;5556667788;500600700
+Zeta CSV Ltd;zeta.csv@test.pl;610200102;6667778899;600700800
+
+Organizations
+Name;Email;Phone;Type
+Local Foundation CSV;local.foundation.csv@test.pl;710300100;Other
+Industry Association CSV;industry.association.csv@test.pl;710300101;Other
+Public Office CSV;public.office.csv@test.pl;710300102;Other

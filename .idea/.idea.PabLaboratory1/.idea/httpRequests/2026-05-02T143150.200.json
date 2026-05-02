@@ -1,0 +1,42 @@
+{
+  "importedContacts": [
+    {
+      "id": "4478a473-8b11-4e17-b99b-1ec3ca1e8216",
+      "name": "Firma Srednik",
+      "type": "Company",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    }
+  ],
+  "errors": [
+    {
+      "contactType": "Company",
+      "sourceData": {
+        "Name": "Firma Kreska",
+        "Email": "firma.kreska@test.pl",
+        "Phone": "555111333",
+        "Nip": "2234567890",
+        "Regon": "222333444"
+      },
+      "messages": [
+        "Company with this email, NIP or REGON already exists in database.",
+        "Company with this email or NIP already exists in database."
+      ]
+    },
+    {
+      "contactType": "Company",
+      "sourceData": {
+        "Name": "Firma Hash",
+        "Email": "firma.hash@test.pl",
+        "Phone": "555111444",
+        "Nip": "3234567890",
+        "Regon": "333444555"
+      },
+      "messages": [
+        "Company with this email, NIP or REGON already exists in database.",
+        "Company with this email or NIP already exists in database."
+      ]
+    }
+  ],
+  "importedCount": 1,
+  "errorCount": 2
+}

@@ -1,0 +1,13 @@
+{
+  "importedContacts": [
+    {
+      "id": "ef5cefb6-89c3-4923-a8c5-ef77099f7949",
+      "name": "Firma JSON REGON",
+      "type": "Company",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    }
+  ],
+  "errors": [],
+  "importedCount": 1,
+  "errorCount": 0
+}

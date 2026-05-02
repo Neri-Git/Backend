@@ -1,0 +1,102 @@
+{
+  "importedContacts": [],
+  "errors": [
+    {
+      "contactType": "Person",
+      "sourceData": {
+        "FirstName": "",
+        "LastName": "InvalidPersonOne",
+        "Email": "wrong-email-format",
+        "Phone": "500900100",
+        "Position": "Tester",
+        "BirthDate": "01/01/1994 00:00:00",
+        "Gender": "Male",
+        "EmployerId": null,
+        "OrganizationId": null,
+        "Address": null
+      },
+      "messages": [
+        "Imię jest wymagane.",
+        "Imię zawiera niedozwolone znaki.",
+        "Nieprawidłowy format adresu email."
+      ]
+    },
+    {
+      "contactType": "Person",
+      "sourceData": {
+        "FirstName": "InvalidPersonTwo",
+        "LastName": "NoPhone",
+        "Email": "invalid.person.two@test.pl",
+        "Phone": "",
+        "Position": "Developer",
+        "BirthDate": "02/02/1995 00:00:00",
+        "Gender": "Female",
+        "EmployerId": null,
+        "OrganizationId": null,
+        "Address": null
+      },
+      "messages": [
+        "Telefon jest wymagany.",
+        "Nieprawidłowy format numeru telefonu."
+      ]
+    },
+    {
+      "contactType": "Company",
+      "sourceData": {
+        "Name": "",
+        "Email": "invalid.company.one@test.pl",
+        "Phone": "600900100",
+        "Nip": "7778889990",
+        "Regon": "700800900",
+        "Address": null
+      },
+      "messages": [
+        "Company name is required."
+      ]
+    },
+    {
+      "contactType": "Company",
+      "sourceData": {
+        "Name": "Invalid Company Two",
+        "Email": "wrong-company-email",
+        "Phone": "600900101",
+        "Nip": "",
+        "Regon": "800900100",
+        "Address": null
+      },
+      "messages": [
+        "Email has invalid format.",
+        "NIP is required."
+      ]
+    },
+    {
+      "contactType": "Organization",
+      "sourceData": {
+        "Name": "",
+        "Email": "invalid.organization.one@test.pl",
+        "Phone": "700900100",
+        "Type": "Other",
+        "Address": null
+      },
+      "messages": [
+        "Organization name is required."
+      ]
+    },
+    {
+      "contactType": "Organization",
+      "sourceData": {
+        "Name": "Invalid Organization Two",
+        "Email": "wrong-organization-email",
+        "Phone": "",
+        "Type": "Other",
+        "Address": null
+      },
+      "messages": [
+        "Email has invalid format.",
+        "Phone is required."
+      ]
+    }
+  ],
+  "importedCount": 0,
+  "errorCount": 6
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Association Import Test",
+    "type": 5,
+    "notes": [],
+    "id": "fd3b16fb-519f-4b6a-b8ab-f96f9079e959",
+    "email": "association.import@test.pl",
+    "phone": "700300101",
+    "address": null,
+    "status": 0,
+    "tags": [],
+    "createdAt": "2026-05-02T12:30:49.2519369",
+    "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+  },
+  {
+    "name": "Foundation Import Test",
+    "type": 5,
+    "notes": [],
+    "id": "7b5e08bc-56f8-456d-8d2c-e7bf092b260c",
+    "email": "foundation.import@test.pl",
+    "phone": "700300100",
+    "address": null,
+    "status": 0,
+    "tags": [],
+    "createdAt": "2026-05-02T12:30:49.24384",
+    "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+  },
+  {
+    "name": "Industry Association CSV",
+    "type": 5,
+    "notes": [],
+    "id": "c5b41977-f09a-4e8c-9e3b-7d0d0e8ec971",
+    "email": "industry.association.csv@test.pl",
+    "phone": "710300101",
+    "address": null,
+    "status": 0,
+    "tags": [],
+    "createdAt": "2026-05-02T12:31:02.37013",
+    "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+  },
+  {
+    "name": "Local Foundation CSV",
+    "type": 5,
+    "notes": [],
+    "id": "a68deba7-d9a4-4ae8-9c8b-69bfd561e218",
+    "email": "local.foundation.csv@test.pl",
+    "phone": "710300100",
+    "address": null,
+    "status": 0,
+    "tags": [],
+    "createdAt": "2026-05-02T12:31:02.3698449",
+    "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+  },
+  {
+    "name": "Public Office CSV",
+    "type": 5,
+    "notes": [],
+    "id": "43b5636d-19e7-4949-b57c-117e03b42aff",
+    "email": "public.office.csv@test.pl",
+    "phone": "710300102",
+    "address": null,
+    "status": 0,
+    "tags": [],
+    "createdAt": "2026-05-02T12:31:02.3704204",
+    "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+  },
+  {
+    "name": "Public Unit Import Test",
+    "type": 5,
+    "notes": [],
+    "id": "33da74de-d63c-4057-9016-47b56ad15510",
+    "email": "publicunit.import@test.pl",
+    "phone": "700300102",
+    "address": null,
+    "status": 0,
+    "tags": [],
+    "createdAt": "2026-05-02T12:30:49.2523256",
+    "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+  }
+]

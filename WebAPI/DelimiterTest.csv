@@ -1,0 +1,9 @@
+Companies
+Name;Email;Phone;Nip;Regon
+Firma Srednik;firma.srednik@test.pl;555113222;1244567890;111222333
+Companies
+Name|Email|Phone|Nip|Regon
+Firma Kreska|firma.kreska@test.pl|555111333|2234567890|222333444
+Companies
+Name#Email#Phone#Nip#Regon
+Firma Hash#firma.hash@test.pl#555111444#3234567890#333444555

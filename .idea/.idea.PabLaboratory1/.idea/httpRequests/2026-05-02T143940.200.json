@@ -1,0 +1,49 @@
+{
+  "importedContacts": [],
+  "errors": [
+    {
+      "contactType": "Company",
+      "sourceData": {
+        "Name": "Firma Srednik",
+        "Email": "firma.srednik@test.pl",
+        "Phone": "555113222",
+        "Nip": "1244567890",
+        "Regon": "111222333"
+      },
+      "messages": [
+        "Company with this email, NIP or REGON already exists in database.",
+        "Company with this email or NIP already exists in database."
+      ]
+    },
+    {
+      "contactType": "Company",
+      "sourceData": {
+        "Name": "Firma Kreska",
+        "Email": "firma.kreska@test.pl",
+        "Phone": "555111333",
+        "Nip": "2234567890",
+        "Regon": "222333444"
+      },
+      "messages": [
+        "Company with this email, NIP or REGON already exists in database.",
+        "Company with this email or NIP already exists in database."
+      ]
+    },
+    {
+      "contactType": "Company",
+      "sourceData": {
+        "Name": "Firma Hash",
+        "Email": "firma.hash@test.pl",
+        "Phone": "555111444",
+        "Nip": "3234567890",
+        "Regon": "333444555"
+      },
+      "messages": [
+        "Company with this email, NIP or REGON already exists in database.",
+        "Company with this email or NIP already exists in database."
+      ]
+    }
+  ],
+  "importedCount": 0,
+  "errorCount": 3
+}
