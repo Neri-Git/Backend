@@ -4,7 +4,7 @@
 ## Autorzy
 
 **Szymon Pocheć**
-**Kopacz jan**
+**Kopacz Jan**
 
 ## Repozytorium GitHub
 
