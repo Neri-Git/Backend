@@ -1,0 +1,153 @@
+{
+  "importedContacts": [],
+  "errors": [
+    {
+      "contactType": "Person",
+      "sourceData": {
+        "FirstName": "Marek",
+        "LastName": "Lewandowski",
+        "Email": "marek.lewandowski.csv@test.pl",
+        "Phone": "510100100",
+        "Position": "Sales Specialist",
+        "BirthDate": "1991-02-10",
+        "Gender": "Male",
+        "EmployerId": "",
+        "OrganizationId": ""
+      },
+      "messages": [
+        "Person with this email already exists in database."
+      ]
+    },
+    {
+      "contactType": "Person",
+      "sourceData": {
+        "FirstName": "Katarzyna",
+        "LastName": "Kaminska",
+        "Email": "katarzyna.kaminska.csv@test.pl",
+        "Phone": "510100101",
+        "Position": "Account Manager",
+        "BirthDate": "1993-04-12",
+        "Gender": "Female",
+        "EmployerId": "",
+        "OrganizationId": ""
+      },
+      "messages": [
+        "Person with this email already exists in database."
+      ]
+    },
+    {
+      "contactType": "Person",
+      "sourceData": {
+        "FirstName": "Tomasz",
+        "LastName": "Wojcik",
+        "Email": "tomasz.wojcik.csv@test.pl",
+        "Phone": "510100102",
+        "Position": "Developer",
+        "BirthDate": "1989-08-22",
+        "Gender": "Male",
+        "EmployerId": "",
+        "OrganizationId": ""
+      },
+      "messages": [
+        "Person with this email already exists in database."
+      ]
+    },
+    {
+      "contactType": "Person",
+      "sourceData": {
+        "FirstName": "Agnieszka",
+        "LastName": "Mazur",
+        "Email": "agnieszka.mazur.csv@test.pl",
+        "Phone": "510100103",
+        "Position": "Tester",
+        "BirthDate": "1996-12-01",
+        "Gender": "Female",
+        "EmployerId": "",
+        "OrganizationId": ""
+      },
+      "messages": [
+        "Person with this email already exists in database."
+      ]
+    },
+    {
+      "contactType": "Company",
+      "sourceData": {
+        "Name": "Delta CSV Sp z o.o.",
+        "Email": "delta.csv@test.pl",
+        "Phone": "610200100",
+        "Nip": "4445556677",
+        "Regon": "400500600"
+      },
+      "messages": [
+        "Company with this email, NIP or REGON already exists in database.",
+        "Company with this email or NIP already exists in database."
+      ]
+    },
+    {
+      "contactType": "Company",
+      "sourceData": {
+        "Name": "Epsilon CSV S.A.",
+        "Email": "epsilon.csv@test.pl",
+        "Phone": "610200101",
+        "Nip": "5556667788",
+        "Regon": "500600700"
+      },
+      "messages": [
+        "Company with this email, NIP or REGON already exists in database.",
+        "Company with this email or NIP already exists in database."
+      ]
+    },
+    {
+      "contactType": "Company",
+      "sourceData": {
+        "Name": "Zeta CSV Ltd",
+        "Email": "zeta.csv@test.pl",
+        "Phone": "610200102",
+        "Nip": "6667778899",
+        "Regon": "600700800"
+      },
+      "messages": [
+        "Company with this email, NIP or REGON already exists in database.",
+        "Company with this email or NIP already exists in database."
+      ]
+    },
+    {
+      "contactType": "Organization",
+      "sourceData": {
+        "Name": "Local Foundation CSV",
+        "Email": "local.foundation.csv@test.pl",
+        "Phone": "710300100",
+        "Type": "Other"
+      },
+      "messages": [
+        "Organization with this email or name already exists in database."
+      ]
+    },
+    {
+      "contactType": "Organization",
+      "sourceData": {
+        "Name": "Industry Association CSV",
+        "Email": "industry.association.csv@test.pl",
+        "Phone": "710300101",
+        "Type": "Other"
+      },
+      "messages": [
+        "Organization with this email or name already exists in database."
+      ]
+    },
+    {
+      "contactType": "Organization",
+      "sourceData": {
+        "Name": "Public Office CSV",
+        "Email": "public.office.csv@test.pl",
+        "Phone": "710300102",
+        "Type": "Other"
+      },
+      "messages": [
+        "Organization with this email or name already exists in database."
+      ]
+    }
+  ],
+  "importedCount": 0,
+  "errorCount": 10
+}

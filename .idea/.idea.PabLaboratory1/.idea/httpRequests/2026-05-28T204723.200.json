@@ -1,0 +1,163 @@
+{
+  "importedContacts": [],
+  "errors": [
+    {
+      "contactType": "Person",
+      "sourceData": {
+        "FirstName": "Jan",
+        "LastName": "Kowalski",
+        "Email": "jan.kowalski.import@test.pl",
+        "Phone": "500100100",
+        "Position": "Sales Specialist",
+        "BirthDate": "15/01/1990 00:00:00",
+        "Gender": "Male",
+        "EmployerId": null,
+        "OrganizationId": null,
+        "Address": null
+      },
+      "messages": [
+        "Person with this email already exists in database."
+      ]
+    },
+    {
+      "contactType": "Person",
+      "sourceData": {
+        "FirstName": "Anna",
+        "LastName": "Nowak",
+        "Email": "anna.nowak.import@test.pl",
+        "Phone": "500100101",
+        "Position": "Account Manager",
+        "BirthDate": "20/03/1992 00:00:00",
+        "Gender": "Female",
+        "EmployerId": null,
+        "OrganizationId": null,
+        "Address": null
+      },
+      "messages": [
+        "Person with this email already exists in database."
+      ]
+    },
+    {
+      "contactType": "Person",
+      "sourceData": {
+        "FirstName": "Piotr",
+        "LastName": "Zielinski",
+        "Email": "piotr.zielinski.import@test.pl",
+        "Phone": "500100102",
+        "Position": "Developer",
+        "BirthDate": "10/07/1988 00:00:00",
+        "Gender": "Male",
+        "EmployerId": null,
+        "OrganizationId": null,
+        "Address": null
+      },
+      "messages": [
+        "Person with this email already exists in database."
+      ]
+    },
+    {
+      "contactType": "Person",
+      "sourceData": {
+        "FirstName": "Ewa",
+        "LastName": "Wisniewska",
+        "Email": "ewa.wisniewska.import@test.pl",
+        "Phone": "500100103",
+        "Position": "Tester",
+        "BirthDate": "05/11/1995 00:00:00",
+        "Gender": "Female",
+        "EmployerId": null,
+        "OrganizationId": null,
+        "Address": null
+      },
+      "messages": [
+        "Person with this email already exists in database."
+      ]
+    },
+    {
+      "contactType": "Company",
+      "sourceData": {
+        "Name": "Alpha Import Sp z o.o.",
+        "Email": "alpha.import@test.pl",
+        "Phone": "600200100",
+        "Nip": "1112223344",
+        "Regon": "100200300",
+        "Address": null
+      },
+      "messages": [
+        "Company with this email, NIP or REGON already exists in database.",
+        "Company with this email or NIP already exists in database."
+      ]
+    },
+    {
+      "contactType": "Company",
+      "sourceData": {
+        "Name": "Beta Import S.A.",
+        "Email": "beta.import@test.pl",
+        "Phone": "600200101",
+        "Nip": "2223334455",
+        "Regon": "200300400",
+        "Address": null
+      },
+      "messages": [
+        "Company with this email, NIP or REGON already exists in database.",
+        "Company with this email or NIP already exists in database."
+      ]
+    },
+    {
+      "contactType": "Company",
+      "sourceData": {
+        "Name": "Gamma Import Ltd",
+        "Email": "gamma.import@test.pl",
+        "Phone": "600200102",
+        "Nip": "3334445566",
+        "Regon": "300400500",
+        "Address": null
+      },
+      "messages": [
+        "Company with this email, NIP or REGON already exists in database.",
+        "Company with this email or NIP already exists in database."
+      ]
+    },
+    {
+      "contactType": "Organization",
+      "sourceData": {
+        "Name": "Foundation Import Test",
+        "Email": "foundation.import@test.pl",
+        "Phone": "700300100",
+        "Type": "Other",
+        "Address": null
+      },
+      "messages": [
+        "Organization with this email or name already exists in database."
+      ]
+    },
+    {
+      "contactType": "Organization",
+      "sourceData": {
+        "Name": "Association Import Test",
+        "Email": "association.import@test.pl",
+        "Phone": "700300101",
+        "Type": "Other",
+        "Address": null
+      },
+      "messages": [
+        "Organization with this email or name already exists in database."
+      ]
+    },
+    {
+      "contactType": "Organization",
+      "sourceData": {
+        "Name": "Public Unit Import Test",
+        "Email": "publicunit.import@test.pl",
+        "Phone": "700300102",
+        "Type": "Other",
+        "Address": null
+      },
+      "messages": [
+        "Organization with this email or name already exists in database."
+      ]
+    }
+  ],
+  "importedCount": 0,
+  "errorCount": 10
+}

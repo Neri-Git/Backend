@@ -2,11 +2,12 @@ using AppCore.Dto;
 using AppCore.Interfaces;
 using AppCore.Module;
 using Infrastructure;
+using Infrastructure.EntityFramework.Context;
 using Infrastructure.Security;
-using AppCore.Interfaces;
 using AppCore.Validators;
 using FluentValidation;
 using Infrastructure.Services;
+using Microsoft.EntityFrameworkCore;
 namespace WebAPI;
 
 public partial class Program
@@ -33,6 +34,12 @@ public partial class Program
         builder.Services.AddScoped<IValidator<CreatePersonDto>, CreatePersonDtoValidator>();
         
         var app = builder.Build();
+
+        using (var scope = app.Services.CreateScope())
+        {
+            var dbContext = scope.ServiceProvider.GetRequiredService<ContactsDbContext>();
+            await dbContext.Database.MigrateAsync();
+        }
 
         if (app.Environment.IsDevelopment())
         {

@@ -27,7 +27,7 @@ public class ContactsDbContext : IdentityDbContext<CrmUser, CrmRole, string>
     {
         if (!optionsBuilder.IsConfigured)
         {
-            optionsBuilder.UseSqlite("Data Source=contacts.db");
+            optionsBuilder.UseSqlite("Data Source=c:\\data\\crm.db");
         }
     }
 

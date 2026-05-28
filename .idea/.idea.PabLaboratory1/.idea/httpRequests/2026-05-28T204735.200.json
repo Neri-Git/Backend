@@ -1,0 +1,67 @@
+{
+  "importedContacts": [
+    {
+      "id": "47248917-3af9-4276-99f8-d4ad39184867",
+      "name": "Marek Lewandowski",
+      "type": "Person",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "a58173f2-a635-494f-9a8e-679072e74d5b",
+      "name": "Katarzyna Kaminska",
+      "type": "Person",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "70fae17c-ecbc-45d4-8032-cf95bcc1deed",
+      "name": "Tomasz Wojcik",
+      "type": "Person",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "c83034ab-0324-4603-afc7-26fd5c7e7780",
+      "name": "Agnieszka Mazur",
+      "type": "Person",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "036bdead-5222-4327-a93b-6671079dc122",
+      "name": "Delta CSV Sp z o.o.",
+      "type": "Company",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "db658571-9ccb-4921-b6fd-5b73647d00b1",
+      "name": "Epsilon CSV S.A.",
+      "type": "Company",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "fe9ad3e2-4834-4841-a141-1fb25fb92ee2",
+      "name": "Zeta CSV Ltd",
+      "type": "Company",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "4cc85818-a35b-4fbb-89bf-06d35a9bbc29",
+      "name": "Local Foundation CSV",
+      "type": "Organization",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "28549c41-aac7-492f-bb96-649afda77d17",
+      "name": "Industry Association CSV",
+      "type": "Organization",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "815e5316-a29e-4cdf-8508-a9021003ef13",
+      "name": "Public Office CSV",
+      "type": "Organization",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    }
+  ],
+  "errors": [],
+  "importedCount": 10,
+  "errorCount": 0
+}

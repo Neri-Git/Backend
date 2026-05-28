@@ -1,0 +1,67 @@
+{
+  "importedContacts": [
+    {
+      "id": "a76f5d1f-cc64-4ad8-8f68-02c62cb548ed",
+      "name": "Jan Kowalski",
+      "type": "Person",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "60ebb846-149f-4667-822a-f6219938f492",
+      "name": "Anna Nowak",
+      "type": "Person",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "da0365f8-4e64-410b-a179-1dc4cf20abb3",
+      "name": "Piotr Zielinski",
+      "type": "Person",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "056d637f-985e-46b9-92dd-289b0ea2b7dc",
+      "name": "Ewa Wisniewska",
+      "type": "Person",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "75805596-342d-41ff-a856-982fcb2ac535",
+      "name": "Alpha Import Sp z o.o.",
+      "type": "Company",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "1c71714c-c227-43bd-89ab-502a9b8579e3",
+      "name": "Beta Import S.A.",
+      "type": "Company",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "94185794-76bc-468a-85c9-693382d0f67c",
+      "name": "Gamma Import Ltd",
+      "type": "Company",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "352e44b0-60c6-4245-87ff-ff5e27096019",
+      "name": "Foundation Import Test",
+      "type": "Organization",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "01f8c230-f2f0-4aca-ab69-a59779110fd2",
+      "name": "Association Import Test",
+      "type": "Organization",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "8f954d46-4c4b-4c3d-a3dc-33d2dfdae733",
+      "name": "Public Unit Import Test",
+      "type": "Organization",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    }
+  ],
+  "errors": [],
+  "importedCount": 10,
+  "errorCount": 0
+}

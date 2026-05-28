@@ -1,0 +1,25 @@
+{
+  "importedContacts": [
+    {
+      "id": "0d9afef3-34b7-4382-9976-e761caffe27c",
+      "name": "Firma Srednik",
+      "type": "Company",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "27c1ec96-be80-4912-8b08-27024595ed94",
+      "name": "Firma Kreska",
+      "type": "Company",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    },
+    {
+      "id": "c59f0060-20ec-482f-850b-1d579d7dfaf6",
+      "name": "Firma Hash",
+      "type": "Company",
+      "createdByUserId": "93A7FFDD-057F-4021-9C68-FE06951FFA65"
+    }
+  ],
+  "errors": [],
+  "importedCount": 3,
+  "errorCount": 0
+}
