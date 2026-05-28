@@ -1,231 +1,88 @@
 
-# Projekt 3
+# Projekt CRM
 
 ## Autorzy
-
-**Szymon Pocheć**
-**Kopacz Jan**
+- **Szymon Pocheć**
+- **Kopacz Jan**
 
 ## Repozytorium GitHub
-
-Link do repozytorium:
-
-```text
 https://github.com/Neri-Git/Backend
-```
 
-## Opis aplikacji
-Aplikacja jest przykładowym systemem CRM do zarządzania kontaktami. Projekt został przygotowany jako aplikacja WebAPI w technologii ASP.NET Core. System pozwala na obsługę różnych typów kontaktów, takich jak osoby, firmy oraz organizacje.
+## Opis projektu
+Aplikacja jest przykładowym systemem CRM zbudowanym jako ASP.NET Core Web API. Projekt wykorzystuje czystą architekturę i rozdział na warstwy:
+- `AppCore` – modele domenowe, DTO, walidatory, interfejsy i logika aplikacyjna
+- `Infrastructure` – EF Core, SQLite, Identity, JWT, refresh tokeny, seedery i serwisy infrastrukturalne
+- `WebAPI` – kontrolery REST, obsługa wyjątków i punkt wejścia API
+- `AppCore.Tests` – testy integracyjne aplikacji
 
-Aplikacja została zbudowana z wykorzystaniem podziału na warstwy zgodnie z założeniami czystej architektury. Logika domenowa, modele, DTO, interfejsy oraz walidatory znajdują się w warstwie AppCore. Implementacja dostępu do danych, konfiguracja Entity Framework, Identity, JWT oraz serwisy infrastrukturalne znajdują się w warstwie Infrastructure. Aplikacja udostępniająca REST API znajduje się w projekcie WebAPI. Dodatkowo projekt posiada część testową przeznaczoną do testów integracyjnych i end-to-end.
+System obsługuje zarządzanie kontaktami, autoryzację użytkowników, impor­t danych z CSV/JSON oraz wstępne dane startowe potrzebne do testowania.
 
-System wykorzystuje bazę danych SQLite oraz Entity Framework Core. Dostęp do aplikacji jest zabezpieczony z użyciem ASP.NET Core Identity, ról użytkowników, JWT oraz refresh tokenów. Każdy kontakt może posiadać informację o użytkowniku, który go dodał lub zaimportował.
+## Najważniejsze implementacje
+### 1. Warstwa domenowa i API
+- W `AppCore` znajdują się modele `Person`, `Company`, `Organization`, `Contact`, a także DTO do tworzenia, odczytu i aktualizacji kontaktów.
+- `PeopleController` udostępnia API dla osób: listowanie, pobieranie po id, tworzenie, aktualizację oraz dodawanie i pobieranie notatek.
+- `CompaniesController` i `OrganizationsController` udostępniają odczyt danych dla firm i organizacji.
 
-## Technologie użyte w projekcie
-W projekcie wykorzystano:
-```text
-ASP.NET Core WebAPI
-Entity Framework Core
-SQLite
-ASP.NET Core Identity
-JWT Bearer Authentication
-Refresh Token
-FluentValidation
-ProblemDetails
-REST API
-Testy integracyjne
-```
+### 2. Autoryzacja i bezpieczeństwo
+- `AuthController` obsługuje:
+  - `POST /api/auth/login`
+  - `POST /api/auth/refresh`
+  - `POST /api/auth/revoke`
+  - `GET /api/auth/me`
+- `AuthService` generuje JWT oraz refresh tokeny, sprawdza hasła, blokuje nieaktywnych użytkowników i unieważnia stare tokeny przy odświeżaniu.
+- `ContactsInfrastructureModule` rejestruje `Identity`, polityki autoryzacji oraz mechanizm JWT.
+- Użytkownicy mają role (`Administrator`, `SalesManager`, `Salesperson`, `SupportAgent`, `ReadOnly`) i są przechowywani w bazie przez `IdentityDbContext`.
+
+### 3. Baza danych i relacje
+- Projekt używa SQLite z EF Core.
+- `ContactsDbContext` łączy `IdentityDbContext` z tabelami kontaktów i refresh tokenów.
+- Kontaktowe encje są dziedziczone po wspólnej bazie `Contact`, a typ kontaktu jest przechowywany jako dyskryminator (`Person`, `Company`, `Organization`).
+- Pole `CreatedByUserId` jest zapisywane przy rekordach kontaktów, co pozwala wiązać import lub tworzenie z użytkownikiem.
+
+### 4. Import kontaktów
+- `ContactImportService` wspiera import z plików `CSV` i `JSON` przez endpoint `POST /api/contact-import`.
+- Obsługuje rozpoznawanie delimitera, mapowanie danych do odpowiednich typów kontaktów, walidację wejścia i raportowanie błędów.
+- Import przypisuje `CreatedByUserId` do nowo dodanych kontaktów, dzięki czemu można śledzić użytkownika, który zaimportował dane.
+
+### 5. Seedery i dane startowe
+- `IdentityDbSeeder` tworzy przykładowych użytkowników i role przy starcie aplikacji.
+- `PeopleDbSeeder` dodaje przykładowe kontakty typu `Person`.
+- Dzięki temu API ma od razu dane do testowania bez ręcznego przygotowywania bazy.
+
+### 6. Testy
+- `AppCore.Tests` zawiera testy integracyjne uruchamiane z użyciem fabryki aplikacji testowej.
+- Testy sprawdzają podstawowe ścieżki REST, m.in. pobieranie osoby, tworzenie osoby, aktualizację i dodawanie notatki.
 
 ## Struktura projektu
-Projekt został podzielony na następujące części:
-```text
-PabLaboratory1
-├── AppCore
-├── AppCore.Tests
-├── Infrastructure
-└── WebAPI
-```
-## AppCore
-Projekt AppCore zawiera główną logikę aplikacji oraz elementy niezależne od infrastruktury.
+- `AppCore` – domena, DTO, walidatory, interfejsy, modele
+- `Infrastructure` – EF Core, SQLite, Identity, JWT, refresh tokeny, seedery, usługi
+- `WebAPI` – kontrolery, konfiguracja, endpointy, pliki importu, `WebAPI.http`
+- `AppCore.Tests` – testy integracyjne
 
-Najważniejsze foldery:
-```text
-AppCore
-├── Authorization
-├── Common
-├── Dto
-├── Exceptions
-├── Interfaces
-├── Models
-├── Module
-├── Services
-├── Validators
-└── ValueObjects
-```
-W projekcie AppCore znajdują się między innymi:
-```text
-modele domenowe, np. Person, Company, Organization, Contact
-klasy DTO, np. PersonDto, CompanyDto, OrganizationDto, CreatePersonDto, CreateCompanyDto
-interfejsy repozytoriów i serwisów
-walidatory FluentValidation
-wyjątki domenowe, np. ContactNotFoundException
-obiekty wartości, np. Address, Gender, ContactStatus, OrganizationType
-logika serwisów aplikacyjnych
-```
+## Uruchomienie projektu
+1. Uruchom aplikację:
+   `dotnet run --project WebAPI`
+2. Aplikacja będzie korzystać z SQLite (`contacts.db`) i wstępnych seedów.
+3. Najważniejsze endpointy:
+   - `POST /api/auth/login` – logowanie i otrzymanie tokenu JWT
+   - `POST /api/auth/refresh` – odświeżenie tokenu, przy użyciu refresh tokenu
+   - `POST /api/auth/revoke` – wylogowanie i unieważnienie refresh tokenu
+   - `GET /api/people` – pobranie listy osób
+   - `POST /api/people` – utworzenie osoby
+   - `PUT /api/people/{id}` – aktualizacja osoby
+   - `POST /api/people/{id}/notes` – dodanie notatki do osoby
+   - `GET /api/people/{id}/notes` – pobranie notatek osoby
+   - `POST /api/contact-import` – import CSV/JSON
+   - `GET /api/companies` i `GET /api/organizations` – odczyt danych firm i organizacji
 
-## Infrastructure
-Projekt Infrastructure zawiera implementację dostępu do danych i mechanizmy infrastrukturalne.
+## Przykładowe dane startowe
+Po uruchomieniu aplikacji zostają utworzeni przykładowi użytkownicy, m.in. administrator i użytkownicy z rolami sprzedaży oraz wsparcia. Dzięki temu można testować autoryzację i role bez dodatkowej konfiguracji.
 
-Najważniejsze foldery:
-```text
-Infrastructure
-├── EntityFramework
-│   ├── Context
-│   ├── Entities
-│   ├── Repositories
-│   └── UnitOfWork
-├── Memory
-├── Migrations
-├── Security
-├── Seeders
-└── Services
-```
-W projekcie Infrastructure znajdują się między innymi:
-```text
-ContactsDbContext
-konfiguracja Entity Framework Core
-konfiguracja SQLite
-migracje bazy danych
-encje Identity, np. CrmUser i CrmRole
-repozytoria EF
-UnitOfWork
-serwisy infrastrukturalne, np. ContactImportService
-obsługa JWT i refresh tokenów
-seedery danych
-```
-## AppCore.Tests
-Projekt AppCore.Tests zawiera testy aplikacji.
+## Testowanie i import
+- Requesty HTTP można uruchamiać z pliku `WebAPI/WebAPI.http`.
+- Pliki wspierające import znajdują się w katalogu `WebAPI` (`JsonImport.json`, `JsonImportErrorTest.json`, `CsvImport.csv`, `CsvImportErrorTest.csv`, `DelimiterTest.csv`).
+- Testy uruchamiasz poleceniem:
+  `dotnet test AppCore.Tests/AppCore.Tests.csproj`
 
-Najważniejsze elementy:
-```text
-testy jednostkowe
-testy integracyjne
-konfiguracja aplikacji testowej
-ContactsAppTestFactory do uruchamiania aplikacji w środowisku testowym
-```
-## WebAPI
-Projekt WebAPI udostępnia aplikację jako REST API.
-
-Najważniejsze elementy:
-```text
-WebAPI
-├── Controllers
-├── Properties
-├── appsettings.json
-├── appsettings.Development.json
-├── contacts.db
-├── CsvImport.csv
-├── CsvImportErrorTest.csv
-├── DelimiterTest.csv
-├── JsonImport.json
-├── JsonImportErrorTest.json
-├── ProblemDetailsExceptionHandler.cs
-├── Program.cs
-├── WeatherForecast.cs
-└── WebAPI.http
-```
-W projekcie WebAPI znajdują się:
-```text
-kontrolery REST API
-konfiguracja aplikacji
-rejestracja zależności
-obsługa wyjątków przez ProblemDetailsExceptionHandler
-plik bazy SQLite contacts.db
-pliki testowe do importu CSV i JSON
-plik WebAPI.http do testowania endpointów
-```
-## Przykładowe dane testowe
-W projekcie WebAPI dodano pliki testowe potrzebne do sprawdzenia importu kontaktów:
-```text
-CsvImport.csv
-CsvImportErrorTest.csv
-DelimiterTest.csv
-JsonImport.json
-JsonImportErrorTest.json
-```
-
-JsonImport.json
-Plik zawiera poprawne dane testowe do importu kontaktów z formatu JSON.
-
-W pliku mogą znajdować się trzy tablice:
-```
-{
-  "people": [],
-  "companies": [],
-  "organizations": []
-}
-```
-JsonImportErrorTest.json
-Plik zawiera błędne dane testowe do sprawdzenia raportowania błędów importu JSON.
-
-Przykładowe błędy:
-```text
-brak wymaganych pól
-błędny format email
-brak numeru telefonu
-brak nazwy firmy lub organizacji
-brak NIP dla firmy
-```
-CsvImport.csv
-Plik zawiera poprawne dane testowe do importu kontaktów z formatu CSV.
-
-Plik CSV może zawierać grupy:
-```text
-People
-Companies
-Organizations
-```
-CsvImportErrorTest.csv
-Plik zawiera błędne dane testowe do sprawdzenia raportowania błędów importu CSV.
-
-DelimiterTest.csv
-Plik służy do sprawdzenia obsługi innego delimitera niż średnik.
-
-Import CSV obsługuje delimiter, który nie jest literą, cyfrą ani znakiem specjalnym używanym w danych, takim jak:
-```text
-@
-+
-,
-```
-Przykładowe obsługiwane delimitery:
-```text
-;
-|
-#
-:
-tabulator
-```
-Jak przetestować import
-Do testowania endpointów można użyć pliku:
-```
-WebAPI/WebAPI.http
-```
-Pliki testowe importu znajdują się bezpośrednio w projekcie WebAPI, dlatego w requestach można używać ścieżek względnych, np.:
-```
-< ./JsonImport.json
-< ./CsvImport.csv
-```
- Przykładowy Import poprawnego pliku JSON
-```
-POST http://localhost:5175/api/contact-import
-Accept: application/json
-Authorization: Bearer TOKEN
-Content-Type: multipart/form-data; boundary=boundary
-
---boundary
-Content-Disposition: form-data; name="file"; filename="JsonImport.json"
-Content-Type: application/json
-
-< ./JsonImport.json
---boundary--
-```
+## Uwaga
+Projekt łączy szereg kluczowych elementów CRM: autoryzację, role, refresh tokeny, bazę SQLite, relacje kontaktów, import danych oraz testy integracyjne. To sprawia, że jest gotowym przykładem aplikacji webowej z realną warstwą API i bezpieczeństwem.
